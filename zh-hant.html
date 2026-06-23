@@ -24,10 +24,9 @@
   <div class="nav-main">
     <a href="#about">關於我們</a>
     <a href="#platforms">平台介紹</a>
-    <a href="#tutoring">升學輔導</a>
-    <a href="#ai-tutor">AI 教學</a>
-    <a href="#teachersearch">TeacherSearch</a>
     <a href="#textbooks">教科書</a>
+    <a href="#ai-tutor">AI 教學</a>
+    <a href="#tutoring">升學輔導</a>
     <a href="#contact">聯絡我們</a>
   </div>
 </nav>
@@ -41,7 +40,8 @@
 <section id="platforms">
   <h2>平台系列</h2>
   <h3>IR 系列 – 科目平台</h3>
-  <p>IR 系列是一個專為中學及預科學生設計的互動學習平台，首個產品 <strong>IRMaths</strong> 將於 2026 年推出，內容全面對應 Edexcel A-Level 數學課程。未來將陸續推出 <strong>IRChemistry</strong> 和 <strong>IRPhysics</strong>。</p>
+  <p>IR 系列現已包括多個已推出的科目平台：<strong>IRMaths</strong>、<strong>IREnglish</strong>、<strong>IRPhysics</strong> 和 <strong>IRChemistry</strong>。各平台結合互動學習資源、AI 輔助反饋與對應課程的練習，支援不同學科的深入學習。</p>
+  <p><strong>IRMaths 是我們的旗艦平台</strong>，專為 Edexcel A-Level 數學而設，涵蓋 Pure Mathematics、Statistics 和 Mechanics，並提供自適應測驗、逐步解答和 AI 學習助理。</p>
   <p>平台特色包括：</p>
   <ul>
     <li>互動式主題教學模組</li>
@@ -49,11 +49,74 @@
     <li>學習表現數據分析</li>
     <li>對應課程的主題測驗</li>
   </ul>
-  <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <a href="https://irmaths.github.io" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit;">
-      <img src="assets/irmaths_uk.png" alt="IRMaths Logo" style="max-height: 250px; border-radius: 0;">
-      <span style="margin-top: 10px;">訪問 IRMaths</span>
+  <div class="platform-grid">
+    <a class="platform-card featured-platform" href="https://irmaths.ireducation.org" target="_blank" rel="noopener noreferrer">
+      <div class="card-image">
+        <img src="assets/irmaths_logo.png" alt="IRMaths Logo">
+      </div>
+      <div class="card-content">
+        <h2>IRMaths</h2>
+        <p>我們的旗艦平台，結合完整數學資源、互動教科書、智能解題工具和嚴謹測驗。</p>
+      </div>
     </a>
+    <a class="platform-card" href="https://irenglish.ireducation.org" target="_blank" rel="noopener noreferrer">
+      <div class="card-image">
+        <img src="assets/irenglish_logo.png" alt="IREnglish Logo">
+      </div>
+      <div class="card-content">
+        <h2>IREnglish</h2>
+        <p>提供全面英語學習材料，協助學生提升語文能力。</p>
+      </div>
+    </a>
+    <a class="platform-card" href="https://irphysics.ireducation.org" target="_blank" rel="noopener noreferrer">
+      <div class="card-image">
+        <img src="assets/irphysics_logo.png" alt="IRPhysics Logo">
+      </div>
+      <div class="card-content">
+        <h2>IRPhysics</h2>
+        <p>透過物理學習平台探索自然界的基本定律。</p>
+      </div>
+    </a>
+    <a class="platform-card" href="https://irchemistry.ireducation.org" target="_blank" rel="noopener noreferrer">
+      <div class="card-image">
+        <img src="assets/irchemistry_logo.png" alt="IRChemistry Logo">
+      </div>
+      <div class="card-content">
+        <h2>IRChemistry</h2>
+        <p>互動課程、模擬和測驗，幫助學生掌握化學概念。</p>
+      </div>
+    </a>
+  </div>
+  <div class="cta-row">
+    <a class="button secondary" href="https://platforms.ireducation.org" target="_blank" rel="noopener noreferrer">查看完整平台目錄</a>
+  </div>
+</section>
+
+<section id="textbooks">
+  <h2>課程對接資源</h2>
+  <p>我們的 Edexcel A-Level 統計教科書是全球首本專為 Edexcel A-Level Statistics 編寫的教材，現已出版並正式發售。教材由 IRMaths 團隊開發，完全對應 Edexcel 課程大綱，包含清晰講解、例題示範及考試風格練習。</p>
+  <ul>
+    <li>完全對應官方課程大綱</li>
+    <li>結構清晰、易於教學與學習</li>
+    <li>配套網上資源與互動功能</li>
+  </ul>
+  <div class="cta-row">
+    <a class="button" href="https://www.amazon.com/dp/1066618402" target="_blank" rel="noopener noreferrer">Amazon 平裝版</a>
+    <a class="button secondary" href="https://www.amazon.com/dp/B0GX34Z6Q9" target="_blank" rel="noopener noreferrer">Kindle 電子書</a>
+  </div>
+</section>
+
+<section id="ai-tutor">
+  <h2>IR-AI：智能教學系統</h2>
+  <p>IR-AI 是一套結合人工智慧的個性化教學系統；IRMaths Tutor 原型現已可供體驗，並會逐步整合至 IRMaths、IREnglish、IRChemistry 和 IRPhysics 等教育平台。系統具備以下特色：</p>
+  <ul>
+    <li>記錄並分析學生的學習歷程與偏好</li>
+    <li>即時提供考試導向的個別輔導</li>
+    <li>支援特殊教育需要（SEND）學生</li>
+    <li>教師可即時掌握學生學習狀況，提供適時指導</li>
+  </ul>
+  <div class="cta-row">
+    <a class="button" href="https://irmaths.ireducation.org/chatbot/" target="_blank" rel="noopener noreferrer">體驗 IRMaths Tutor 原型</a>
   </div>
 </section>
 
@@ -64,39 +127,6 @@
     <li>GCSE、A-Level各科及IELTS補習</li>
     <li>UCAS 申請及 Oxbridge 升學輔導</li>
     <li>個人陳述撰寫與修改（由專業導師指導）</li>
-  </ul>
-</section>
-
-<section id="ai-tutor">
-  <h2>IR-AI：智能教學系統</h2>
-  <p>預計於 2026 年推出的 IR-AI 是一套結合人工智慧的個性化教學系統，具備以下特色：</p>
-  <ul>
-    <li>記錄並分析學生的學習歷程與偏好</li>
-    <li>即時提供考試導向的個別輔導</li>
-    <li>支援特殊教育需要（SEND）學生</li>
-    <li>教師可即時掌握學生學習狀況，提供適時指導</li>
-  </ul>
-  <p><strong>體驗 IRMaths Tutor 教學原型：</strong> <a href="https://irmaths.ireducation.org/chatbot/" target="_blank">立即試用</a></p>
-</section>
-
-<section id="teachersearch">
-  <h2>TeacherSearch – 教師配對平台</h2>
-  <p><strong>TeacherSearch</strong> 將於 2025 年下旬推出，是一個專為教育人員打造的智能招聘平台。教師可建立個人檔案，學校則能透過AI系統快速精準地篩選合適人選。</p>
-  <p>平台功能包括：</p>
-  <ul>
-    <li>簡化申請與招聘流程</li>
-    <li>協助公立學校解決師資短缺問題</li>
-    <li>建立集中化的招聘資料庫</li>
-  </ul>
-</section>
-
-<section id="textbooks">
-  <h2>課程對接資源</h2>
-  <p>我們正籌備編寫英國首本針對 Edexcel A-Level 統計課程的專屬教科書。所有教材將與 IR 系列平台無縫整合，具備以下特色：</p>
-  <ul>
-    <li>完全對應官方課程大綱</li>
-    <li>結構清晰、易於教學與學習</li>
-    <li>配套網上資源與互動功能</li>
   </ul>
 </section>
 
