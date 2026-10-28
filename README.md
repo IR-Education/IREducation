@@ -1,9 +1,17 @@
-# About IREducation Inc.
+# About IREducation Ltd.
 
-IREducation (InteRactive Education) is an innovative education company based in Hong Kong, operating in China and the UK, where the latter is run under Oxford Advanced Learning. We are building a complete ecosystem that redefines the way students, teachers, and institutions engage with education.
+IREducation Ltd. (InteRactive Education) is an educational publishing and learning-technology company based in Hong Kong, operating in China and the UK, where the latter is run through Oxford Advanced Learning. IREducation Ltd. is the operating company; IREducation Inc. currently remains the publisher of record for the books.
 
-With a strong focus on Mathematics, Sciences, and university preparation, our long-term vision is to become the leading educational corporation in the UK — an all-encompassing “educational emporium” offering tools for students, teachers, and institutions.
+We specialise in producing high-quality, curriculum-aligned textbooks and the digital platforms that accompany them. Our resources currently span mathematics, science, and English.
 
-We aim to develop and deploy a suite of AI-driven tools, state-of-the-art digital platforms, and high-quality curricular content aligned with national standards. This initiative is designed not only to fill current educational gaps but to anticipate and shape the future of learning through innovation, accessibility, and academic excellence.
+By developing print and interactive resources together, we connect clear explanations and exam-focused practice with online lessons, assessment, feedback, and teacher-facing tools.
+
+## Publishing programme
+
+Isaac Chit Hang Teng is the author of IREducation's *Advanced Statistics for Edexcel A-Level* editions, published in June 2026, and the *Further Mathematics for CCEA A-Level* series now in preparation. These books are published, or planned for publication, by IREducation Inc. The CCEA Statistics option is scheduled for publication before the end of 2026; the complete seven-title series covering Pure Mathematics and every optional pathway is expected in 2027.
+
+## IR-Tutor
+
+IR-Tutor is the AI learning assistant available through IRMaths. It provides lesson- and assessment-aware explanations, hints, working checks, similar practice questions, dynamic quizzes, targeted feedback, and teacher-facing insights.
 
 Visit our homepage : [IREducation.org](https://ireducation.org)

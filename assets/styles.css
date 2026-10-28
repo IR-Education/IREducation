@@ -190,6 +190,11 @@ section > h3 {
   text-transform: uppercase;
 }
 
+section > .platform-feature-heading,
+section > .subsection-heading {
+  margin-top: 3rem;
+}
+
 section > p,
 section > ul {
   max-width: 850px;
@@ -197,8 +202,7 @@ section > ul {
 
 section > p,
 .profile p {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: start;
 }
 
 p {
@@ -312,6 +316,70 @@ section .button.secondary {
 .cta-row {
   margin-top: 1.5rem;
   justify-content: flex-start;
+}
+
+.publication-notice {
+  max-width: 850px;
+  margin: 2rem 0;
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(135deg, rgba(23, 78, 166, 0.08), rgba(0, 127, 143, 0.08));
+  border: 1px solid rgba(23, 78, 166, 0.2);
+  border-left: 5px solid var(--teal);
+  border-radius: 8px;
+}
+
+.publication-notice p:last-child,
+.bibliography p:last-child,
+.feature-card p:last-child {
+  margin-bottom: 0;
+}
+
+.bibliography {
+  max-width: 850px;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.35rem;
+  color: #38475a;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.bibliography-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  padding: 1.35rem;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--teal);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(18, 36, 58, 0.07);
+}
+
+.feature-card h3 {
+  margin: 0 0 0.55rem;
+  color: var(--blue-dark);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .platform-grid {
@@ -549,6 +617,10 @@ footer p {
   }
 
   .platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
