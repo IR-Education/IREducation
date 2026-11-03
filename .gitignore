@@ -1,3 +1,4 @@
 .DS_Store
 *.pdf
 !assets/downloads/statistics-evaluation-copy.pdf
+!assets/downloads/ccea-statistics-evaluation-copy.pdf
