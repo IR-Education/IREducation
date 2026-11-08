@@ -66,7 +66,7 @@
   <h2>我们的教材</h2>
   <h3>已出版</h3>
   <div class="book-feature">
-    <figure class="book-cover">
+    <figure class="book-cover book-cover-hover">
       <img src="assets/books/edexcel-statistics-cover.jpg" alt="Advanced Statistics for Edexcel A-Level 封面">
     </figure>
     <div class="book-details">
@@ -89,16 +89,28 @@
   </div>
   <h3 class="subsection-heading">筹备中</h3>
   <div class="book-feature">
-    <figure class="book-cover">
-      <img src="assets/books/ccea-statistics-cover.jpg" alt="Further Mathematics for CCEA A-Level: Statistics 封面">
-    </figure>
+    <div class="book-carousel" data-book-carousel role="group" aria-label="筹备中的 CCEA 教材">
+      <div class="book-carousel-slides">
+        <figure class="book-cover is-active" data-slide data-book="statistics" data-title="Statistics">
+          <img src="assets/books/ccea-statistics-cover.jpg" alt="Further Mathematics for CCEA A-Level: Statistics 封面">
+        </figure>
+        <figure class="book-cover" data-slide data-book="decision" data-title="Discrete and Decision Mathematics" aria-hidden="true">
+          <img src="assets/books/ccea-discrete-decision-cover.jpg" alt="Further Mathematics for CCEA A-Level: Discrete and Decision Mathematics 封面" loading="lazy">
+        </figure>
+      </div>
+      <div class="book-carousel-controls">
+        <button type="button" class="carousel-button" data-direction="-1" aria-label="上一本">&#8249;</button>
+        <p class="book-carousel-caption" aria-live="polite"><span data-caption>Statistics</span><span class="book-carousel-count" data-count>1 / 2</span></p>
+        <button type="button" class="carousel-button" data-direction="1" aria-label="下一本">&#8250;</button>
+      </div>
+    </div>
     <div class="book-details">
   <p>Isaac Chit Hang Teng 还撰写了整套 <strong>Further Mathematics for CCEA A-Level</strong> 系列，目前由 IREducation Inc. 筹备出版。规划中的教材涵盖完整的 Pure Mathematics 课程和全部选修模块：Statistics、Mechanics Options 1 and 2，以及 Discrete and Decision Mathematics。</p>
   <div class="publication-notice">
-    <p><strong>下一本新书：</strong>Further Mathematics for CCEA A-Level: Statistics 将于 2026 年 12 月 1 日出版。</p>
+    <p><strong>即将出版：</strong>Further Mathematics for CCEA A-Level: Statistics 和 Further Mathematics for CCEA A-Level: Discrete and Decision Mathematics 将于 2026 年 12 月 1 日出版。</p>
     <p>完整的七册 CCEA 系列预计 2027 年推出，Pure Mathematics 将分别出版 AS、A2 和合订版。</p>
   </div>
-  <div class="cta-row">
+  <div class="cta-row" data-book-panel="statistics">
     <a class="button" href="https://www.amazon.co.uk/dp/B0HQ8WRT14" target="_blank" rel="noopener">在 Amazon 预订电子书</a>
     <a class="button secondary" href="assets/downloads/ccea-statistics-evaluation-copy.pdf" download>下载评估样本</a>
   </div>
@@ -201,6 +213,34 @@
   document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </footer>
+
+  <script>
+  document.querySelectorAll('[data-book-carousel]').forEach(function (carousel) {
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-slide]'));
+    var caption = carousel.querySelector('[data-caption]');
+    var count = carousel.querySelector('[data-count]');
+    var feature = carousel.closest('.book-feature');
+    var panels = feature ? Array.prototype.slice.call(feature.querySelectorAll('[data-book-panel]')) : [];
+    var index = 0;
+    function show(next) {
+      index = (next + slides.length) % slides.length;
+      slides.forEach(function (slide, n) {
+        var active = n === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      caption.textContent = slides[index].getAttribute('data-title');
+      count.textContent = (index + 1) + ' / ' + slides.length;
+      panels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute('data-book-panel') !== slides[index].getAttribute('data-book');
+      });
+    }
+    carousel.querySelectorAll('[data-direction]').forEach(function (button) {
+      button.addEventListener('click', function () { show(index + Number(button.getAttribute('data-direction'))); });
+    });
+    show(0);
+  });
+  </script>
 
 </body>
 </html>

@@ -70,7 +70,7 @@
   <h2>Our Textbooks</h2>
   <h3>Published</h3>
   <div class="book-feature">
-    <figure class="book-cover">
+    <figure class="book-cover book-cover-hover">
       <img src="assets/books/edexcel-statistics-cover.jpg" alt="Cover of Advanced Statistics for Edexcel A-Level">
     </figure>
     <div class="book-details">
@@ -93,16 +93,28 @@
   </div>
   <h3 class="subsection-heading">In development</h3>
   <div class="book-feature">
-    <figure class="book-cover">
-      <img src="assets/books/ccea-statistics-cover.jpg" alt="Cover of Further Mathematics for CCEA A-Level: Statistics">
-    </figure>
+    <div class="book-carousel" data-book-carousel role="group" aria-label="CCEA titles in development">
+      <div class="book-carousel-slides">
+        <figure class="book-cover is-active" data-slide data-book="statistics" data-title="Statistics">
+          <img src="assets/books/ccea-statistics-cover.jpg" alt="Cover of Further Mathematics for CCEA A-Level: Statistics">
+        </figure>
+        <figure class="book-cover" data-slide data-book="decision" data-title="Discrete and Decision Mathematics" aria-hidden="true">
+          <img src="assets/books/ccea-discrete-decision-cover.jpg" alt="Cover of Further Mathematics for CCEA A-Level: Discrete and Decision Mathematics" loading="lazy">
+        </figure>
+      </div>
+      <div class="book-carousel-controls">
+        <button type="button" class="carousel-button" data-direction="-1" aria-label="Previous book">&#8249;</button>
+        <p class="book-carousel-caption" aria-live="polite"><span data-caption>Statistics</span><span class="book-carousel-count" data-count>1 / 2</span></p>
+        <button type="button" class="carousel-button" data-direction="1" aria-label="Next book">&#8250;</button>
+      </div>
+    </div>
     <div class="book-details">
   <p>Isaac Chit Hang Teng is also the author of our complete <strong>Further Mathematics for CCEA A-Level</strong> series now in preparation under IREducation Inc. The planned books cover the full Pure Mathematics course and every optional pathway: Statistics, Mechanics Options 1 and 2, and Discrete and Decision Mathematics.</p>
   <div class="publication-notice">
-    <p><strong>Next publication:</strong> Further Mathematics for CCEA A-Level: Statistics is scheduled for publication on 1 December 2026.</p>
+    <p><strong>Next publications:</strong> Further Mathematics for CCEA A-Level: Statistics and Further Mathematics for CCEA A-Level: Discrete and Decision Mathematics are scheduled for publication on 1 December 2026.</p>
     <p>The wider seven-title CCEA series — including separate AS, A2, and combined Pure Mathematics editions — is expected in 2027.</p>
   </div>
-  <div class="cta-row">
+  <div class="cta-row" data-book-panel="statistics">
     <a class="button" href="https://www.amazon.co.uk/dp/B0HQ8WRT14" target="_blank" rel="noopener">Pre-order eBook on Amazon</a>
     <a class="button secondary" href="assets/downloads/ccea-statistics-evaluation-copy.pdf" download>Download Evaluation Copy</a>
   </div>
@@ -205,6 +217,34 @@
   document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </footer>
+
+  <script>
+  document.querySelectorAll('[data-book-carousel]').forEach(function (carousel) {
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-slide]'));
+    var caption = carousel.querySelector('[data-caption]');
+    var count = carousel.querySelector('[data-count]');
+    var feature = carousel.closest('.book-feature');
+    var panels = feature ? Array.prototype.slice.call(feature.querySelectorAll('[data-book-panel]')) : [];
+    var index = 0;
+    function show(next) {
+      index = (next + slides.length) % slides.length;
+      slides.forEach(function (slide, n) {
+        var active = n === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      caption.textContent = slides[index].getAttribute('data-title');
+      count.textContent = (index + 1) + ' / ' + slides.length;
+      panels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute('data-book-panel') !== slides[index].getAttribute('data-book');
+      });
+    }
+    carousel.querySelectorAll('[data-direction]').forEach(function (button) {
+      button.addEventListener('click', function () { show(index + Number(button.getAttribute('data-direction'))); });
+    });
+    show(0);
+  });
+  </script>
 
 </body>
 </html>
