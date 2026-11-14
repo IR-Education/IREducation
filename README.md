@@ -8,7 +8,7 @@ By developing print and interactive resources together, we connect clear explana
 
 ## Publishing programme
 
-Isaac Chit Hang Teng is the author of IREducation's *Advanced Statistics for Edexcel A-Level* editions, published in June 2026, and the *Further Mathematics for CCEA A-Level* series now in preparation. These books are published, or planned for publication, by IREducation Inc. The CCEA Statistics option is scheduled for publication before the end of 2026; the complete seven-title series covering Pure Mathematics and every optional pathway is expected in 2027.
+Isaac Chit Hang Teng is the author of IREducation's *Advanced Statistics for Edexcel A-Level* editions, published in May 2026, and the *Further Mathematics for CCEA A-Level* series now in preparation. These books are published, or planned for publication, by IREducation Inc. The CCEA Statistics option is scheduled for publication before the end of 2026; the complete seven-title series covering Pure Mathematics and every optional pathway is expected in 2027.
 
 ## IR-Tutor
 
